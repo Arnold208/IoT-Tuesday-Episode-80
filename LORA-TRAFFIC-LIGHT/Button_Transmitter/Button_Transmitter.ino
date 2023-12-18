@@ -30,6 +30,8 @@ void setup() {
   pinMode(green_button, INPUT);
  
   // Configure LoRa module at Startup
+  sendLoRa.println("AT");
+  delay(1000);
   sendLoRa.println("AT+BAND=" + lora_band);
   delay(1000);
   sendLoRa.println("AT+ADDRESS=" + lora_TX_address);
