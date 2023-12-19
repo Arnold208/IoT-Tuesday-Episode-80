@@ -57,9 +57,9 @@ void checkSerial() {
 
     Serial.println(DataIn);
 
-    String  red_cmd = getValue(DataIn, '%', 0); //--> Get temperature data
-    String  yellow_cmd = getValue(DataIn, '%', 1); //--> Get humidity data
-    String  green_cmd  = getValue(DataIn, '%', 2); //--> Get moisture data
+    String  red_cmd = getValue(DataIn, '%', 0);  
+    String  yellow_cmd = getValue(DataIn, '%', 1); 
+    String  green_cmd  = getValue(DataIn, '%', 2); 
 
     if (red_cmd == "1") {
       digitalWrite(red, HIGH);
